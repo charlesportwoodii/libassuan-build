@@ -45,7 +45,7 @@ fpm_debian:
 		-n libassuan \
 		-v $(VERSION)-$(RELEASEVER)~$(shell lsb_release --codename | cut -f2) \
 		-C /tmp/libassuan-$(VERSION)-install \
-		-p libbrotli_$(VERSION)-$(RELEASEVER)~$(shell lsb_release --codename | cut -f2)_$(shell arch).deb \
+		-p libassuan_$(VERSION)-$(RELEASEVER)~$(shell lsb_release --codename | cut -f2)_$(shell arch).deb \
 		-m "charlesportwoodii@erianna.com" \
 		--license "GPLv3" \
 		--url https://github.com/charlesportwoodii/librotli-build \
@@ -63,8 +63,8 @@ fpm_rpm:
 		-t rpm \
 		-n libassuan \
 		-v $(VERSION)_$(RELEASEVER) \
-		-C /tmp/libbrotli-install \
-		-p libbrotli_$(VERSION)-$(RELEASEVER)_$(shell arch).rpm \
+		-C /tmp/libassuan-install \
+		-p libassuan_$(VERSION)-$(RELEASEVER)_$(shell arch).rpm \
 		-m "charlesportwoodii@erianna.com" \
 		--license "GPLv3" \
 		--url https://github.com/charlesportwoodii/libassuan-build \
